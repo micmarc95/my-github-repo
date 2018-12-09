@@ -67,7 +67,7 @@ public class Main {
 
         Swimable swimable2 = (distance, speed) -> {
 
-            System.out.println("time = " + distance/speed);}
+            System.out.println("time = " + distance/speed);};
 
         swimable2.swim(25,25);
 
