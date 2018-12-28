@@ -8,23 +8,38 @@ import java.awt.event.ActionListener;
 public class MainFrame extends JFrame {
 
     private TextPanel textPanel;
-    private JButton btn;
+    private Toolbar toolbar;
+    private FormPanel formPanel;
 
     public MainFrame() {
 
         setLayout(new BorderLayout());
 
+        toolbar = new Toolbar();
         textPanel = new TextPanel();
-        btn = new JButton("Click");
+        formPanel = new FormPanel();
 
-        btn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                textPanel.appendText("Hello\n");
+        toolbar.setStringListener(new StringListener() {
+            @Override
+            public void textEmitted(String text) {
+                textPanel.appendText(text);
             }
         });
 
+        formPanel.setFormListener(new FormListener(){
+           public void formEventOccurred(FormEvent e){
+               String name = e.getName();
+               String occupation = e.getOccupation();
+               int ageCat = e.getAgeCategory();
+
+               textPanel.appendText(name + ": " + occupation + ": " + ageCat + "\n");
+           }
+
+        });
+
+        add(formPanel,BorderLayout.WEST);
+        add(toolbar,BorderLayout.NORTH);
         add(textPanel,BorderLayout.CENTER);
-        add(btn,BorderLayout.SOUTH);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600,500);
