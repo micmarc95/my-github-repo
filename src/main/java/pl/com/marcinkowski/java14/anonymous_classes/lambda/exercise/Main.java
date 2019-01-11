@@ -2,7 +2,7 @@ package pl.com.marcinkowski.java14.anonymous_classes.lambda.exercise;
 
 public class Main {
 
-    String main; // skoro przy main nie ma statica, tzn ze odnosi sie do obiektu z klasy Main, wiec musimy stworzyc obiekt typu Main zeby to wywolac
+    String main; // skoro przy main nie ma statica, tzn ze odnosi sie do obiektu z klasy Min_max_matrix, wiec musimy stworzyc obiekt typu Min_max_matrix zeby to wywolac
 
     public static void main(String[] args) {
 

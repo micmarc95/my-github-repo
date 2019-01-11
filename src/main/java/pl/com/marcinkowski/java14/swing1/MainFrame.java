@@ -19,6 +19,8 @@ public class MainFrame extends JFrame {
         textPanel = new TextPanel();
         formPanel = new FormPanel();
 
+        setJMenuBar(createMenuBar());
+
         toolbar.setStringListener(new StringListener() {
             @Override
             public void textEmitted(String text) {
@@ -31,8 +33,11 @@ public class MainFrame extends JFrame {
                String name = e.getName();
                String occupation = e.getOccupation();
                int ageCat = e.getAgeCategory();
+               String empCat = e.getEmploymentCategory();
+               String taxId = e.getTaxID();
+               String gender = e.getGender();
 
-               textPanel.appendText(name + ": " + occupation + ": " + ageCat + "\n");
+               textPanel.appendText(name + ": " + occupation + ": " + ageCat + ", " + empCat + ", " + taxId + ", " + gender + "\n");
            }
 
         });
@@ -45,4 +50,46 @@ public class MainFrame extends JFrame {
         setSize(600,500);
         setVisible(true);
     }
+
+    private JMenuBar createMenuBar(){
+        JMenuBar menuBar = new JMenuBar();
+
+
+        JMenu fileMenu = new JMenu("File");
+        JMenuItem exportDataItem = new JMenuItem("Export Data...");
+        JMenuItem importDataItem = new JMenuItem("Import Data...");
+        JMenuItem exitItem = new JMenuItem("Exit");
+
+        fileMenu.add(exportDataItem);
+        fileMenu.add(importDataItem);
+        fileMenu.addSeparator();
+        fileMenu.add(exitItem);
+
+
+        JMenu windowMenu = new JMenu("Window");
+        JMenu showMenu = new JMenu("Show");
+
+        JMenuItem showFormItem = new JCheckBoxMenuItem("Person Form");
+        showFormItem.setSelected(true);
+
+        showMenu.add(showFormItem);
+        windowMenu.add(showMenu);
+
+
+        menuBar.add(fileMenu);
+        menuBar.add(windowMenu);
+
+
+        showFormItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JCheckBoxMenuItem menuItem = (JCheckBoxMenuItem)e.getSource();
+                formPanel.setVisible(menuItem.isSelected());
+            }
+        });
+
+        return menuBar;
+
+    }
+
 }
