@@ -7,7 +7,7 @@ public class Person {
     private int age;
 
     public Person(String name, String surname, int age) throws WrongParameter{
-        if (name == null || "".equals(name)){     //bo gdyby były warunki w odwrotnej kolejnosci to mogłoby wywalić nullpointer exception przy zapisie: name.equals("")
+        if (name == null || "".equals(name)){     //bo gdyby były warunki w odwrotnej kolejnosci to mogłoby wywalić nullpointer exc przy zapisie: name.equals("")
             throw new WrongParameter("Imię nie może być puste: " + name);
         }
         if (surname == null || "".equals(surname)){
