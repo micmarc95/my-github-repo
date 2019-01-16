@@ -2,7 +2,7 @@ package pl.com.marcinkowski.java14.sorting.car;
 
 import java.time.LocalDate;
 
-public class Car implements Comparable <Car>{
+public class Car implements Comparable <Car>, CarConcat<Car> {
 
     private String brand;
     private String model;
@@ -60,4 +60,13 @@ public class Car implements Comparable <Car>{
         carComparable.compareTo(this);
     }
 
+
+    @Override
+    public void concatTwoBrands(Car object) {
+        System.out.println(this.brand + " - " + object.getBrand());
+    }
+
+    public void doSomething( CarConcat<Car> carConcat){
+        carConcat.concatTwoBrands(this);
+    }
 }

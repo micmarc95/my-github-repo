@@ -66,5 +66,9 @@ public class Main {
         cars.get(0).compareTo(cars.get(1));
         cars.get(0).maybeCompare((Car o) -> o.getPower());
 
+        cars.get(0).concatTwoBrands(cars.get(1));
+        cars.get(0).doSomething(object -> System.out.println(object.getBrand() + " - "));
+
+
     }
 }
