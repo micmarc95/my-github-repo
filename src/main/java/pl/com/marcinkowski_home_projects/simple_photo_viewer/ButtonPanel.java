@@ -1,12 +1,11 @@
-package pl.com.marcinkowski_home_projects.photo_viewer;
-
-import pl.com.marcinkowski.java14.Computer.Mainframe;
+package pl.com.marcinkowski_home_projects.simple_photo_viewer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -27,6 +26,7 @@ public class ButtonPanel extends JPanel{
         previous = new JButton("<----");
         next = new JButton("----->");
         image = new JLabel();
+
 
         add(previous);
         add(next);

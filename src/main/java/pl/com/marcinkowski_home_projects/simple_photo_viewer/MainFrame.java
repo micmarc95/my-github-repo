@@ -1,4 +1,4 @@
-package pl.com.marcinkowski_home_projects.photo_viewer;
+package pl.com.marcinkowski_home_projects.simple_photo_viewer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -9,9 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainFrame extends JFrame {

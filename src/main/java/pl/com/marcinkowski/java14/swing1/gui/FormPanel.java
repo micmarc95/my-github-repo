@@ -1,10 +1,11 @@
-package pl.com.marcinkowski.java14.swing1;
+package pl.com.marcinkowski.java14.swing1.gui;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class FormPanel extends JPanel {
 
@@ -38,6 +39,12 @@ public class FormPanel extends JPanel {
         citizenCheck = new JCheckBox();
         taxField = new JTextField(10);
         taxLabel = new JLabel(" Tax ID: ");
+        okBtn = new JButton("OK");
+
+        //set up mnemonics
+        okBtn.setMnemonic(KeyEvent.VK_O);
+        nameLabel.setDisplayedMnemonic(KeyEvent.VK_N);
+        nameLabel.setLabelFor(nameField);
 
         maleRadio = new JRadioButton("male");
         maleRadio.setSelected(true);
@@ -87,7 +94,8 @@ public class FormPanel extends JPanel {
         empCombo.setSelectedIndex(0);
         empCombo.setEditable(true);
 
-        okBtn = new JButton("OK");
+
+
         okBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -102,8 +110,6 @@ public class FormPanel extends JPanel {
 
 
                 ageCat.getId();
-
-
 
 
                 FormEvent ev = new FormEvent(this, name, occupation, ageCat.getId(), empCat, taxId, usCitizen, gender);

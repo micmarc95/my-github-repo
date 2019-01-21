@@ -1,4 +1,4 @@
-package pl.com.marcinkowski.java14.swing1;
+package pl.com.marcinkowski.java14.swing1.gui;
 
 import java.util.EventObject;
 

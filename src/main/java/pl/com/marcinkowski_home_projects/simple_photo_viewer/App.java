@@ -1,4 +1,4 @@
-package pl.com.marcinkowski.java14.swing1;
+package pl.com.marcinkowski_home_projects.simple_photo_viewer;
 
 import javax.swing.*;
 
@@ -8,6 +8,7 @@ public class App {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame();
+
             }
         });
 

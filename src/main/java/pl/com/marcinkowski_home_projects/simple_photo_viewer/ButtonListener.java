@@ -1,4 +1,4 @@
-package pl.com.marcinkowski_home_projects.photo_viewer;
+package pl.com.marcinkowski_home_projects.simple_photo_viewer;
 
 import java.util.EventListener;
 
