@@ -1,6 +1,8 @@
-package pl.com.marcinkowski.java14.swing1.model;
+package pl.com.marcinkowski_home_projects.swing_udemy_course.model;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
 
     private static int count;
     private int id;

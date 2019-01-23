@@ -1,4 +1,4 @@
-package pl.com.marcinkowski.java14.swing1.gui;
+package pl.com.marcinkowski_home_projects.swing_udemy_course.gui;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -288,12 +288,11 @@ public class FormPanel extends JPanel {
         add(okBtn,gc);
 
 
-
-
     }
 
 
     public void setFormListener(FormListener formListener){
+
         this.formListener = formListener;
     }
 }

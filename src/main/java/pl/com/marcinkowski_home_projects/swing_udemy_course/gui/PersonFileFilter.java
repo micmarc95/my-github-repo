@@ -1,4 +1,4 @@
-package pl.com.marcinkowski.java14.swing1.gui;
+package pl.com.marcinkowski_home_projects.swing_udemy_course.gui;
 
 import javax.swing.filechooser.FileFilter;
 import java.io.File;
